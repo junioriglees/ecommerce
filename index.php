@@ -52,8 +52,18 @@ $app->get('/admin/logout', function () {
 	exit;
 
 });
-// FUNÇÃO LOGOUT
-
+// FUNÇÃO LOGOUT FIM.
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //ROTAS DE TELAS COMEÇA AQUI.........
 
 $app->get("/admin/users", function () {
@@ -124,7 +134,7 @@ $app->post("/admin/users/create", function () {
 	$_POST["inadmin"] = (isset($_POST["inadmin"])) ? 1 : 0;
 	$user->setData($_POST);
 	$user->save();
-	$header("Location: /admin/users");
+	header("Location: /admin/users");
 	exit;
 	var_dump($user);
 
@@ -140,7 +150,7 @@ $app->post("/admin/users/:iduser", function ($iduser) {
 	$user->update();
 
 	header("Location: /admin/users");
-	exit();
+	exit;
 
 });
 
